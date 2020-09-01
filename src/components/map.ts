@@ -13,7 +13,8 @@
     HostBinding,
     ViewEncapsulation,
     ChangeDetectionStrategy,
-    NgZone
+    NgZone,
+    AfterViewInit
 } from '@angular/core';
 import { MapServiceFactory } from '../services/mapservicefactory';
 import { MapService } from '../services/map.service';
