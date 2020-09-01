@@ -80,7 +80,7 @@ import { MapMarkerDirective } from './map-marker';
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MapComponent implements OnChanges, OnInit, OnDestroy {
+export class MapComponent implements OnChanges, OnInit, OnDestroy, AfterViewInit {
 
     ///
     /// Field declarations
@@ -276,9 +276,12 @@ export class MapComponent implements OnChanges, OnInit, OnDestroy {
      * @memberof MapComponent
      */
     public ngOnInit(): void {
-        this.InitMapInstance(this._container.nativeElement);
         this.MapPromise.emit(this._mapService.MapPromise);
         this.MapService.emit(this._mapService);
+    }
+
+    public ngAfterViewInit() {
+        this.InitMapInstance(this._container.nativeElement);
     }
 
     /**
