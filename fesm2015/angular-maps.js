@@ -7087,9 +7087,13 @@ class MapComponent {
      * @return {?}
      */
     ngOnInit() {
-        this.InitMapInstance(this._container.nativeElement);
+       
         this.MapPromise.emit(this._mapService.MapPromise);
         this.MapService.emit(this._mapService);
+    }
+
+    ngAfterViewInit() {
+        this.InitMapInstance(this._container.nativeElement);
     }
     /**
      * Called when changes to the databoud properties occur. Part of the ng Component life cycle.

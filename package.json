@@ -53,9 +53,11 @@
     "typescript": "<=2.8.0",
     "zone.js": "^0.8.26"
   },
+  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/angular-maps.js",
   "es2015": "fesm2015/angular-maps.js",
   "esm2015": "esm2015/angular-maps.js",
   "esm5": "esm5/angular-maps.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/angular-maps.js",
   "fesm2015": "fesm2015/angular-maps.js",
   "fesm5": "fesm5/angular-maps.js",
   "homepage": "https://github.com/infusion-code/angular-maps/wiki",
@@ -85,5 +87,13 @@
   },
   "sideEffects": false,
   "typings": "angular-maps.d.ts",
-  "version": "6.0.3"
+  "version": "6.0.3",
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "9.1.12",
+    "fesm2015": "9.1.12",
+    "typings": "9.1.12"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  }
 }
