@@ -5,6 +5,8 @@ npm-debug.log
 # angular aot files
 aot
 
+# distribution
+dist
 
 # OS generated files
 Thumbs.db
@@ -14,3 +16,7 @@ Thumbs.db
 .idea
 
 # Ignored files
+*.js
+*.map
+*.d.ts
+*lock.json
